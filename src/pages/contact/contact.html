@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-list [virtualScroll]="items">
+  <ion-list [virtualScroll]="items" approxItemHeight="40px">
     <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item *virtualItem="let item">
+    <ion-item *virtualItem="let item" [virtualTrackBy]="id">
       <ion-icon name="ionic" item-left></ion-icon>
       {{item}}
     </ion-item>

@@ -7,12 +7,13 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
 
-  public items: Array<string> = [];
+  public items: Array<any> = [];
 
   constructor(public navCtrl: NavController) {
     for(let i = 0; i < 100; i++)
     {
-      this.items.push('name' +i);
+      this.items.push({id: i,
+         name:'name' +i});
     }
   }
 }
